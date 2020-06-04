@@ -14,3 +14,26 @@
 - 支持一键复制对应的状态
 - 响应体如果是JSON，支持自动格式化
 - 抓包数据，默认缓存一天
+
+
+#接入方式
+```gradle
+allprojects {
+	repositories {
+	   maven { url 'https://jitpack.io' }
+	}
+}
+
+dependencies {
+    debugImplementation 'com.github.gqdy365.okhttpcapture:normal:1.0.2'
+    releaseImplementation 'com.github.gqdy365.okhttpcapture:no-op:1.0.2'
+}
+```
+在你的全局OkHttp中添加 Interceptor
+```java
+new OkHttpClient.Builder()
+        .addInterceptor(new CaptureInfoInterceptor())
+        .build();
+```
+# 注意事项
+注意接入时  debugImplementation 和 releaseImplementation区别，releaseImplementation中不包含任何其他代码
