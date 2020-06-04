@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.okhttpcapture'
 
 android {
     compileSdkVersion 29
@@ -32,6 +34,6 @@ dependencies {
     implementation 'com.android.support:design:29.0.0'
     implementation 'com.zaihuishou:expandablerecycleradapter:1.0.3'
     implementation 'com.android.support:support-v4:29.0.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
     implementation 'com.google.code.gson:gson:2.8.2'
 }
