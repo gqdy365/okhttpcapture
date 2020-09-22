@@ -1,6 +1,5 @@
 # 简介
 基于OKHttp拦截器的实用抓包工具
-项目基于这个开源库：https://github.com/DingProg/NetworkCaptureSelf
 
 # 功能改进
 - 增加初始化，删除自带的通过ContentProvider初始化Context。因为使用过程中发现有Context为空的问题。
